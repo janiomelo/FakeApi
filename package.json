@@ -1,0 +1,14 @@
+{
+  "name": "fake-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Janio Melo <janiobmelo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-cache": "^5.1.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
