@@ -1,4 +1,4 @@
-import AgendamentosRepo from '../repositories/agendamento';
+import AgendamentosRepo from '../repositories/agendamentoRepository';
 
 export default {
   novosAgendamentos: (req, res) => {

@@ -1,6 +1,6 @@
 import myCache from "../myCache";
 import PessoaFisicaRepo from "./pessoaFisica";
-import agendamentoFactory from "../factories/agendamento";
+import agendamentoFactory from "../factories/agendamentoFactory";
 
 class Agendamentos {
   geraAgendamentos() {
