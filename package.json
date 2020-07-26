@@ -5,10 +5,12 @@
   "author": "Janio Melo <janiobmelo@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "node-cache": "^5.1.2"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node -r esm index.js",
+    "dev": "supervisor -- -r esm index.js"
   }
 }
