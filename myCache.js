@@ -27,6 +27,24 @@ var MyCache;
       },
       limparAtendimentos: () => {
         return nodeInstance.set("atendimentosCache", null);
+      },
+      getResolvido: () => {
+        return nodeInstance.get("resolvidosBot");
+      },
+      getNaoResolvido: () => {
+        return nodeInstance.get("naoResolvidosBot");
+      },
+      addResolvido: () => {
+        let resolvido = nodeInstance.get("resolvidosBot");
+        if (!resolvido) resolvido = 1;
+        else resolvido++
+        nodeInstance.set("resolvidosBot", resolvido);
+      },
+      addNaoResolvido: () => {
+        let naoResolvido = nodeInstance.get("naoResolvidosBot");
+        if (!naoResolvido) naoResolvido = 1;
+        else naoResolvido++
+        nodeInstance.set("naoResolvidosBot", naoResolvido);
       }
     };
   };

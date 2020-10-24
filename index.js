@@ -1,8 +1,9 @@
-import express from 'express';
 import AgendamentoController from './controllers/AgendamentoController';
-import MotivoController from './controllers/MotivoController';
 import AtendimentoController from './controllers/AtendimentoController';
+import BotController from './controllers/BotController';
 import FilaAtendimentoController from './controllers/FilaAtendimentoController';
+import MotivoController from './controllers/MotivoController';
+import express from 'express';
 
 const app = express();
 app.use(express.json());
@@ -17,7 +18,11 @@ app.get("/meus-atendimentos", AtendimentoController.meusAtendimentos);
 app.post("/limpar-atendimentos", AtendimentoController.limpaAtendimentos);
 app.post("/inicia-atendimento", FilaAtendimentoController.iniciaAtendimento);
 app.post("/encerra-atendimento", FilaAtendimentoController.encerraAtendimento);
+app.post("/resolvido", BotController.incrementaResolvido);
+app.post("/nao-resolvido", BotController.incrementaNaoResolvido);
+app.get("/resultado", BotController.resultado);
 
 var porta = process.env.PORT || 8080;
 
 app.listen(porta);
+
