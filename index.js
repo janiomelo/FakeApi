@@ -3,6 +3,7 @@ import AtendimentoController from './controllers/AtendimentoController';
 import BotController from './controllers/BotController';
 import FilaAtendimentoController from './controllers/FilaAtendimentoController';
 import MotivoController from './controllers/MotivoController';
+import PessoaController from './controllers/PessoaController';
 import express from 'express';
 
 const app = express();
@@ -21,6 +22,7 @@ app.post("/encerra-atendimento", FilaAtendimentoController.encerraAtendimento);
 app.post("/resolvido", BotController.incrementaResolvido);
 app.post("/nao-resolvido", BotController.incrementaNaoResolvido);
 app.get("/resultado", BotController.resultado);
+app.put("/pessoa/:id", PessoaController.atualiza)
 
 var porta = process.env.PORT || 8080;
 
